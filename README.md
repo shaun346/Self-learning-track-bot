@@ -3,7 +3,7 @@ This repo consists of 2 simulations of bots in pre-built tracks i built using gy
 
 
 **What I Actually Built & Learnt This Week**
-This week, I finally got to move away from rigid, rule-based programming (writing endless "if-else" loops) and stepped into Reinforcement Learning (RL). Instead of telling the car exactly what to do, I set up a system where it learns how to drive through absolute trial and error.Using Gymnasium and the PPO algorithm, I coded two different track environments from scratch:
+This week, I finally stepped into Reinforcement Learning (RL). Instead of telling the car exactly what to do, I set up a system where it learns how to drive through absolute trial and error.Using Gymnasium and the PPO algorithm, I coded two different track environments from scratch:
 
 The Circular Track: A simple, donut-shaped track. Checking if the car was in or out of bounds was easy here because I just used a basic radius formula from the center point $(0,0)$.The Multi-Turn S-Curve Track: A much tougher layout built by stringing together a bunch of 2D coordinate points (Waypoints).To give the car "eyes," I built a 5-ray Lidar sensor array. It basically shoots out virtual lasers ahead and to the sides to measure distances to the walls. This feeds a neat array of geometric data straight into the neural network so it can decide how to steer or when to hit the gas. 
 
