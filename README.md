@@ -18,3 +18,6 @@ To fix that, I wrote a helper method that projects the car’s coordinates onto 
 
 
 NEXT, I ran a benchmark test on the S-curve track by changing Gamma , which is the discount factor controlling how far into the future the AI looks. I pitted a Long-Term Planner (gamma = 0.99) against a Short-Term Speedster (gamma = 0.70).The Surprise: The short-term model (gamma = 0.70) actually won, hitting a higher mean evaluation score of 1982.63 over the long-term model's 1923.96.The Reason: Because our track layout was relatively short, the gamma = 0.99 model became hyper-cautious about crashing way down the line and drove way too slow. The gamma = 0.70 model only cared about immediate speed gains, which ironically made it cut a beautiful, aggressive, high-speed racing line through the coordinates without breaking a sweat.
+
+UPDATE:-
+to make the project more interesting, i added a 'crashed car' in the middle of the tracks. In basic terms, i added a circular obstacle in the middle of the track such that after a certain point, the closer you get to the circle the more point it deducts every millisecond. when you finaally crash to the obstacle, it causes a MASSIVE penalty and deduction of point. This teaches the car to learn to go around it. the updated code is in the trackforbot-with-obstacle file with the graph as well.
